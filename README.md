@@ -1,2 +1,2 @@
 # PlateofHope
-Plate of Hope | A web platform connecting donors and acceptors with real-time updates, authentication, and item tracking.
+Plate of Hope | Empowering generosity by connecting donors, NGOs, and volunteers to bring essentials—food, clothes, books, and blankets—to those in need.
