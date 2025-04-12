@@ -435,7 +435,7 @@ html {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-  height: 400px;
+  height: flex;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
