@@ -11,7 +11,7 @@ Tech Stack
 
 How It Works
 - Donors sign up and list items they wish to donate.
-- NGOs and volunteers browse listings and coordinate collection.
+- NGOs and volunteers browse listings and coordinate collection and donation.
 - Communities contribute and help those in need.
 - Forums, testimonials, and success stories to build a stronger community and encourage active participation. 
 
