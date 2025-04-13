@@ -7,7 +7,7 @@ Features:
 - Empowers communities to support those in need.
 
 Tech Stack:
-- Frontend: [e.g., HTML, CSS, JavaScript]
+- Frontend: [e.g., HTML, CSS, JavaScript, React]
 
 How It Works:
 - Donors sign up and list items they wish to donate.
