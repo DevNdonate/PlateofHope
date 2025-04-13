@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+</head>
+<body> 
+  <!--nav bar--> 
+  <header class="site-header">
+    <nav class="navbar">
+        <div class="navbar-container">
+
+            <a href="/" class="navbar-brand">
+                <img src="PLATE OF (2).png" alt="Brand Name" class="logo-img">
+            </a>
+
+            <button class="navbar-toggle" id="navbar-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <div class="navbar-collapse" id="navbar-menu">
+                <ul class="navbar-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="who.html">Who We Are</a></li>
+                    <li><a href="what.html">What We Do</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="#contact"></a></li>
+                </ul>
+                <a href="donate.html" class="cta-button">Donate Now</a>
+            </div>
+        </div>
+    </nav>
+</header>
+  <!--end-->
+
+  <!--image slider-->  
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="image1.png" alt="Image 1">
+      </div>
+      <div class="slide">
+        <img src="Image2.png" alt="Image 2">
+      </div>
+      <div class="slide">
+        <img src="Image11.jpg" alt="Image 3">
+      </div>
+      <div class="slide">
+        <img src="Image10.jpg" alt="Image 4">
+      </div>
+    </div>
+  
+    <div class="buttons">
+      <button id="prev">&#10094;</button>
+      <button id="next">&#10095;</button>
+    </div>
+  </div>
+  
+  <div class="dots">
+    <span class="dot active" onclick="goToSlide(0)"></span>
+    <span class="dot" onclick="goToSlide(1)"></span>
+    <span class="dot" onclick="goToSlide(2)"></span>
+    <span class="dot" onclick="goToSlide(3)"></span>
+  </div>
+  <!--end-->
+
+  <!--typing-->
+  <section class="typing">
+  <div class="typing-container">
+    <span id="typing-text"></span>
+  </div>
+  </section>
+  <!--end-->
+
+  <div class="cards">
+  <div class="roles-container">
+    <div class="role-card" onmouseover="this.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(card2.png)'" onmouseout="this.style.backgroundImage = 'none'">
+        <div class="role-icon"><i class="fas fa-handshake"></i></div>
+        <h3 class="role-title">NGO Partner</h3>
+        <p class="role-description">Connect, collaborate, and amplify your impact.</p>
+        <button class="cta-button"><a href="ngo.html">Join Now</a></button>
+    </div>
+    <div class="role-card" onmouseover="this.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(card1.avif)'" onmouseout="this.style.backgroundImage = 'none'">
+        <div class="role-icon"><i class="fas fa-donate"></i></div>
+        <h3 class="role-title">Donor</h3>
+        <p class="role-description">Make a direct difference with your contributions.</p>
+        <button class="cta-button"><a href="donor.html">Join Now</a></button>
+    </div>
+    <div class="role-card" onmouseover="this.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(card3.jpg)'" onmouseout="this.style.backgroundImage = 'none'">
+        <div class="role-icon"><i class="fas fa-users"></i></div>
+        <h3 class="role-title">Volunteer</h3>
+        <p class="role-description">Be the force for positive change in your community.</p>
+        <button class="cta-button"><a href="volunteer.html">Join Now</a></button>
+    </div>
+  </div>
+  </div>
+
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Make a Donation</title>
+      <link rel="stylesheet" href="101.css">
+  </head>
+  <body>
+      <div class="main">
+      <div class="donation-form-container">
+  
+          <form id="donation-form" action="#" method="post"> 
+              <h2>Make a Difference Today</h2>
+          
+  
+              <fieldset class="form-section">
+                  <legend>Donation Frequency</legend>
+                  <div class="radio-group frequency-group">
+                      <label>
+                          <input type="radio" name="donation_frequency" value="one-time" checked> One Time
+                      </label>
+                      <label>
+                          <input type="radio" name="donation_frequency" value="monthly"> Monthly
+                      </label>
+                  </div>
+              </fieldset>
+  
+              <fieldset class="form-section">
+                  <legend>Select Amount (INR)</legend>
+                  <div class="radio-group amount-group">
+                      <label class="amount-button">
+                          <input type="radio" name="donation_amount_preset" value="100" checked> ₹100
+                      </label>
+                      <label class="amount-button">
+                          <input type="radio" name="donation_amount_preset" value="500"> ₹500
+                      </label>
+                      <label class="amount-button">
+                          <input type="radio" name="donation_amount_preset" value="1000"> ₹1000
+                      </label>
+                      <label class="amount-button">
+                          <input type="radio" name="donation_amount_preset" value="2500"> ₹2500
+                      </label>
+                      <label class="amount-button custom-amount-label">
+                          <input type="radio" name="donation_amount_preset" value="custom" id="custom-amount-radio"> Custom
+                      </label>
+                  </div>
+                   <div class="custom-amount-wrapper">
+                       <span class="currency-symbol">₹</span>
+                      <input type="number" id="custom-amount-input" name="custom_amount" placeholder="Enter Amount" min="1" step="1" disabled>
+                  </div>
+              </fieldset>
+  
+              <fieldset class="form-section">
+                  <legend>Payment Method</legend>
+                  <div class="radio-group payment-group">
+                       <label>
+                          <input type="radio" name="payment_method" value="upi" checked> UPI
+                      </label>
+                      <label>
+                          <input type="radio" name="payment_method" value="credit_card"> Credit/Debit Card
+                      </label>
+                      <label>
+                          <input type="radio" name="payment_method" value="net_banking"> Net Banking
+                      </label>
+                       <label>
+                          <input type="radio" name="payment_method" value="paypal"> PayPal
+                      </label>
+                  </div>
+              </fieldset>
+  
+              <button type="submit" class="submit-button">Donate Now</button>
+          </form>
+      </div>
+  </div>
+  
+      <script src="script.js"></script>
+  </body>
+  </html>
+
+
+  <section class="impact">
+  <div class="impact-tracker">
+    <h2>Our Impact So Far</h2>
+    <div class="counters-container">
+        <div class="counters">
+            <div class="counter" data-target="2000">0</div>
+            <div class="description"><i class="fas fa-gift"></i> Items Donated</div>
+        </div>
+        <div class="counters">
+            <div class="counter" data-target="150">0</div>
+            <div class="description"><i class="fas fa-handshake"></i> Volunteers Joined</div>
+        </div>
+        <div class="counters">
+            <div class="counter" data-target="7">0</div>
+            <div class="description"><i class="fas fa-map-marked-alt"></i> Cities Reached</div>
+        </div>
+    </div>
+    <div class="progress-bar">
+        <span style="display: block; text-align: left;">Goal: 5,000 meals</span>
+        <div class="bar">
+            <div class="progress"></div>
+        </div>
+        <span style="display: block; text-align: right;">4,000 meals delivered</span>
+    </div>
+    <div class="impact-timeline">
+        <h3>Milestones of Our Journey</h3>
+        <div class="timeline">
+            <div class="timeline-path"></div>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>March</h4>
+                    <p>Commenced community outreach and planning sessions.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-people-carry"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>April</h4>
+                    <p>Expanded our volunteer base with over 100 dedicated individuals.</p>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">
+                    <i class="fas fa-route"></i>
+                </div>
+                <div class="timeline-content">
+                    <h4>May</h4>
+                    <p>Successfully distributed meals and resources in 5 key cities.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>
+  
+
+<section class="parallax-section" id="section1">
+    <div class="overlay"></div>
+    <div class="content-box">
+        <h1><span style="color: rgb(250, 179, 1);">FIGHT</span> HUNGER TODAY</h1>
+        <p>one-third of the food produced in the world for human consumption every year, approximately 1.3 billion tonnes, gets lost or wasted.</p>
+    </div>
+</section>
+
+<div class="spacer">
+    <h2>We, together will ensure that those foods should reach out to the needy.</h2>
+    <p></p>
+</div>
+
+
+<section class="parallax-section" id="section2">
+     <div class="overlay"></div>
+    <div class="content-box">
+        <h1>PREVENT HUNGER TOMORROW</h1>
+        <p>When life gives you extra give it forward.</p>
+    </div>
+</section>
+
+<!-- Scrollable Testimonial Section -->
+<section class="scrollable-testimonials" id="testimonials">
+    <h2 class="testimonial-title">What People Say</h2>
+  
+    <div class="testimonial-scroll-wrapper">
+      <div class="testimonial-scroll">
+  
+        <div class="testimonial-card">
+          <p>“Donating through this platform was effortless. I’m glad my unused clothes helped someone in need.”</p>
+          <h4>— Asha, Donor</h4>
+        </div>
+  
+        <div class="testimonial-card">
+          <p>“We received dry food packs during floods — it was a lifesaver for my family.”</p>
+          <h4>— Ravi, Beneficiary</h4>
+        </div>
+  
+        <div class="testimonial-card">
+          <p>“As a volunteer, this system makes connecting with donors much faster and easier.”</p>
+          <h4>— Priya, NGO Volunteer</h4>
+        </div>
+  
+        <div class="testimonial-card">
+          <p>“I found a meaningful way to give back through this site. It’s amazing!”</p>
+          <h4>— Karan, Donor</h4>
+        </div>
+  
+      </div>
+    </div>
+  </section>
+  
+  
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-container">
+  
+      <!-- Brand Message -->
+      <div class="footer-brand">
+        <h2>Plate of Hope</h2>
+        <p>Bridging the gap between giving and need. One donation at a time.</p>
+      </div>
+  
+      <!-- Quick Links -->
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="who.html">Who We Are</a></li>
+          <li><a href="what.html">What We Do</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <!-- Social Media -->
+      <div class="footer-social">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#"><img src="facebook.png" alt="Facebook"></a>
+          <a href="#"><img src="instagram.png" alt="Instagram"></a>
+          <a href="#"><img src="twitter.png" alt="Twitter"></a>
+        </div>
+      </div>
+  
+    </div>
+  
+    <!-- Copyright -->
+    <div class="footer-bottom">
+      <p>© 2025 Plate of Hope. Made with 💛 at NIT Patna.</p>
+    </div>
+  </footer>
+  
+
+
+
+
+
+
+
+  
+  <script src="script.js"></script>
+</body>
+</html>

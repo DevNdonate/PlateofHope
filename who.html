@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Who We Are | Plate of Kindness</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #dedddd 0%, #e7d8d8 100%);
+      color: #333;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background-color: #f4a021;
+      padding: 20px;
+      text-align: center;
+      color: #fff;
+    }
+    header h1 {
+      font-size: 2.8rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+    .intro-box, .mission-box, .values-box {
+      padding: 40px;
+      border-radius: 15px;
+      margin-bottom: 50px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    }
+    .intro-box {
+      background: #fff0da;
+      text-align: center;
+    }
+    .intro-box p {
+      font-size: 1.5rem;
+      color: #555;
+      max-width: 800px;
+      margin: auto;
+      border-radius: 4px;
+      padding: 10px;
+    }
+    .mission-box {
+        background: linear-gradient(to right, #ebcc9d, #e79213);
+
+    }
+    .mission-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 40px;
+      align-items: center;
+    }
+    .mission-text h2 {
+      font-size: 2rem;
+      color: #f89705;
+      margin-bottom: 15px;
+    }
+    .mission-text p {
+      font-size: 1.1rem;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    .mission-image img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+    .values-box {
+      background-color: #fff0da;
+      text-align: center;
+    }
+    .values-box h3 {
+      font-size: 2rem;
+      color: #f89705;
+      margin-bottom: 20px;
+    }
+    .values-box p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: auto;
+      color: #444;
+    }
+    footer {
+      margin-top: 60px;
+      text-align: center;
+      padding: 20px;
+      background-color: #262626;
+      color: #f1f1f1;
+    }
+    .home-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #fff;
+      color: #ffbd59;
+      font-size: 1.5rem;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: bounce 1.5s infinite;
+      z-index: 1000;
+    }
+    .home-button:hover {
+      background-color: #ffe4b3;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .intro-box p {
+        font-size: 1.1rem;
+      }
+      .values-box h3 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <a href="index.html" class="home-button" title="Back to Home">🏠</a>
+    <h1>Who We Are</h1>
+  </header>
+
+  <div class="container">
+    <div class="intro-box" data-aos="fade-up">
+      <p>Empowering people to share their surplus with those in need — that's what we stand for at Plate of Kindness.</p>
+    </div>
+
+    <div class="mission-box" data-aos="fade-up">
+      <div class="mission-grid">
+        <div class="mission-text" data-aos="fade-right">
+          <h2>Our Mission</h2>
+          <p>We are a student-led initiative from NIT Patna, working toward a more generous and sustainable society. Our platform enables individuals to donate food, clothes, books, and daily-use items while empowering NGOs and volunteers to reach those in need.</p>
+          <p>By connecting kindness with need, we strive to ensure that nothing useful goes to waste and every act of giving creates ripples of impact.</p>
+        </div>
+        <div class="mission-image" data-aos="fade-left">
+          <img src="image1.png" alt="Our Team Working">
+        </div>
+      </div>
+    </div>
+
+    <div class="values-box" data-aos="zoom-in">
+      <h3>Our Core Values</h3>
+      <p>Compassion, Transparency, Community Empowerment, and Sustainability. These guide every feature we build and every connection we create.</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Plate of Kindness. Made with 💛 by NIT Patna students.</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>

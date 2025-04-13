@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact Us - Plate of Kindness</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<style>
+    /* Home Bouncing Button */
+.home-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background-color: #fbfaf9;
+  color: white;
+  padding: 12px 14px;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 999;
+  text-decoration: none;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* Contact Section */
+.contact-section {
+    background: linear-gradient(to bottom, #f5c57c 0%, #f8a01e 100%);
+  padding: 80px 20px;
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-container {
+  max-width: 700px;
+  background: white;
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.contact-header h1 {
+  color: #fa8c16;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.contact-header p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+}
+
+.contact-form .form-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #bbb9b9;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  resize: none;
+}
+
+.contact-form input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.contact-form textarea {
+  height: 150px;
+  margin-bottom: 20px;
+}
+
+.contact-form button {
+  background: #fa8c16;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: #e97d10;
+}
+
+/* Responsive Contact */
+@media (max-width: 600px) {
+  .form-group {
+    flex-direction: column;
+  }
+
+  .contact-container {
+    padding: 30px 20px;
+  }
+
+  .home-btn {
+    padding: 10px 12px;
+    font-size: 18px;
+  }
+}
+
+</style>
+<body>
+
+<!-- Home Button -->
+<a href="index.html" class="home-btn" title="Back to Home">🏠</a>
+
+
+<!-- Contact Section -->
+<section class="contact-section">
+  <div class="contact-container">
+    <div class="contact-header">
+      <h1>Get In Touch</h1>
+      <p>We’d love to hear from you — whether you're a donor, receiver, or just curious!</p>
+    </div>
+
+    <form class="contact-form">
+      <div class="form-group">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+      </div>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+</section>
+
+</body>
+</html>

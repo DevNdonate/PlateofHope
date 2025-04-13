@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organization Registration - Receive Donations</title>
+    <link rel="stylesheet" href="505.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fdf9f3;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+.form-container {
+    background-color: #ffffff;
+    padding: 35px 50px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    max-width: 950px;
+    width: 100%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 700;
+    font-size: 1.8em;
+}
+
+.form-description {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.95em;
+}
+
+
+fieldset {
+    border: 1px solid #e0e0e0;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+legend {
+    font-weight: 600;
+    color: #444;
+    padding: 0 10px;
+    font-size: 1.15em;
+    margin-left: 5px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group:last-child {
+     margin-bottom: 5px;
+}
+
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.9em;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1em;
+    font-family: inherit;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: #fff; /* Ensure background is white */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #fcc400;
+    box-shadow: 0 0 0 3px rgba(252, 196, 0, 0.25);
+}
+
+textarea {
+    resize: vertical;
+    min-height: 70px;
+}
+
+select {
+   appearance: none;
+   -webkit-appearance: none;
+   -moz-appearance: none;
+   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');
+   background-repeat: no-repeat;
+   background-position: right 15px center;
+   background-size: 10px 10px;
+   padding-right: 40px;
+   cursor: pointer;
+}
+
+.address-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.half-width {
+    flex: 1;
+    min-width: calc(50% - 10px);
+}
+
+.checkbox-group {
+    border: 1px solid #eee;
+    padding: 15px 20px;
+    border-radius: 6px;
+    margin-top: 10px;
+}
+
+.checkbox-group > label {
+    font-weight: 600;
+    margin-bottom: 15px;
+    font-size: 0.95em;
+}
+
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.checkbox-item:last-child {
+    margin-bottom: 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: auto;
+    margin-right: 12px;
+    flex-shrink: 0;
+    accent-color: #fcc400; /* Style checkbox color */
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.checkbox-item label {
+    margin-bottom: 0;
+    font-weight: 400;
+    color: #333;
+    font-size: 0.95em;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.sr-only { /* Hides label visually but keeps it accessible */
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+#item-other-specify {
+    margin-top: 10px;
+}
+
+.submit-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    background-color: #fcc400;
+    color: #222;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.1em;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+    background-color: #333333;
+    color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+input:required:invalid,
+select:required:invalid,
+textarea:required:invalid {
+     border-color: #e74c3c; /* Indicate required fields not filled */
+     box-shadow: 0 0 0 2px rgba(231, 76, 60, 0.2);
+}
+input[type="checkbox"]:required:invalid + label {
+     color: #e74c3c; /* Highlight label if required checkbox isn't checked */
+}
+
+
+@media (max-width: 768px) {
+    .form-container {
+        padding: 30px 35px;
+        max-width: 95%;
+    }
+
+    .address-row {
+       gap: 0;
+    }
+
+    .half-width {
+        min-width: 100%;
+        margin-bottom: 20px; /* Add margin when stacked */
+    }
+    .address-row .half-width:last-child {
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-size: 1.6em;
+    }
+    legend {
+        font-size: 1.1em;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 20px 10px;
+    }
+    .form-container {
+        padding: 25px 20px;
+    }
+    fieldset {
+        padding: 20px 15px;
+    }
+    input, textarea, select, .submit-btn {
+        font-size: 0.95em;
+        padding: 11px 12px;
+    }
+     h2 {
+        font-size: 1.4em;
+    }
+    legend {
+        font-size: 1.05em;
+    }
+     .checkbox-item label {
+         font-size: 0.9em;
+     }
+}
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <form id="accepter-form">
+            <h2>Register Your Organization</h2>
+            <p class="form-description">Complete this form if your organization requires item donations.</p>
+
+            <fieldset>
+                <legend>Organization Information</legend>
+                <div class="form-group">
+                    <label for="org-name">Organization Name</label>
+                    <input type="text" id="org-name" name="org_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="org-type">Type of Organization</label>
+                    <select id="org-type" name="org_type" required>
+                        <option value="">-- Select Type --</option>
+                        <option value="NGO">NGO / Non-Profit</option>
+                        <option value="Orphanage">Orphanage</option>
+                        <option value="Shelter">Shelter (e.g., Homeless, Animal)</option>
+                        <option value="OldAgeHome">Old Age Home</option>
+                        <option value="School">Underprivileged School</option>
+                        <option value="CommunityCenter">Community Center</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reg-number">Registration Number (If applicable)</label>
+                    <input type="text" id="reg-number" name="org_reg_number">
+                </div>
+                 <div class="form-group">
+                    <label for="org-description">Brief Description / Mission</label>
+                    <textarea id="org-description" name="org_description" rows="3" placeholder="What does your organization do?"></textarea>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Contact Person Details</legend>
+                <div class="form-group">
+                    <label for="contact-name">Contact Person's Full Name</label>
+                    <input type="text" id="contact-name" name="contact_name" required>
+                </div>
+                 <div class="address-row">
+                     <div class="form-group half-width">
+                        <label for="contact-email">Contact Email</label>
+                        <input type="email" id="contact-email" name="contact_email" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="contact-phone">Contact Phone Number</label>
+                        <input type="tel" id="contact-phone" name="contact_phone" required>
+                    </div>
+                 </div>
+                 <div class="form-group">
+                    <label for="contact-designation">Designation / Role (Optional)</label>
+                    <input type="text" id="contact-designation" name="contact_designation">
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Organization Address</legend>
+                <div class="form-group">
+                    <label for="address">Street Address / Building</label>
+                    <textarea id="address" name="org_address" rows="3" required></textarea>
+                </div>
+                <div class="address-row">
+                    <div class="form-group half-width">
+                        <label for="district">District / City</label>
+                        <input type="text" id="district" name="org_district" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="state">State</label>
+                        <input type="text" id="state" name="org_state" required>
+                    </div>
+                </div>
+                 <div class="address-row">
+                    <div class="form-group half-width">
+                        <label for="pin">PIN Code</label>
+                        <input type="text" id="pin" name="org_pin" pattern="\d{6}" title="Enter 6 digit PIN code" required>
+                    </div>
+                    <div class="form-group half-width">
+                        <label for="landmark">Landmark (Optional)</label>
+                        <input type="text" id="landmark" name="org_landmark">
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Items Needed</legend>
+                <div class="form-group checkbox-group" id="items-needed-group">
+                    <label>Select the types of items your organization accepts (Select at least one):</label>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="item-clothes" name="items_needed" value="Clothes">
+                        <label for="item-clothes">Clothes (All ages/genders)</label>
+                    </div>
+                     <div class="checkbox-item">
+                        <input type="checkbox" id="item-books" name="items_needed" value="Books">
+                        <label for="item-books">Books / Stationery</label>
+                    </div>
+                     <div class="checkbox-item">
+                        <input type="checkbox" id="item-toys" name="items_needed" value="Toys">
+                        <label for="item-toys">Toys / Games</label>
+                    </div>
+                     <div class="checkbox-item">
+                        <input type="checkbox" id="item-food" name="items_needed" value="Food">
+                        <label for="item-food">Non-Perishable Food Items</label>
+                    </div>
+                     <div class="checkbox-item">
+                        <input type="checkbox" id="item-household" name="items_needed" value="Household">
+                        <label for="item-household">Household Goods (Utensils, Linens, etc.)</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="item-furniture" name="items_needed" value="Furniture">
+                        <label for="item-furniture">Small Furniture Items</label>
+                    </div>
+                     <div class="checkbox-item">
+                        <input type="checkbox" id="item-electronics" name="items_needed" value="Electronics">
+                        <label for="item-electronics">Working Electronics (Specify)</label>
+                    </div>
+                     <div class="checkbox-item">
+                        <input type="checkbox" id="item-other-check" name="items_needed_other_check">
+                        <label for="item-other-check">Other (Please Specify Below)</label>
+                    </div>
+                    <div class="form-group">
+                         <label for="item-other-specify" class="sr-only">Specify Other Items</label>
+                         <input type="text" id="item-other-specify" name="items_needed_other_specify" placeholder="Specify other items needed...">
+                    </div>
+                </div>
+                 <div class="form-group">
+                    <label for="urgent-needs">Specific Urgent Needs (Optional)</label>
+                    <textarea id="urgent-needs" name="urgent_needs" rows="3" placeholder="Any items particularly needed right now?"></textarea>
+                </div>
+            </fieldset>
+
+             <fieldset>
+                <legend>Confirmation</legend>
+                 <div class="form-group checkbox-item">
+                    <input type="checkbox" id="confirmation" name="confirmation" required>
+                    <label for="confirmation">I confirm that the information provided is accurate and that our organization is eligible to receive donations.</label>
+                </div>
+             </fieldset>
+
+
+            <button type="submit" class="submit-btn"><a href="ngo-dashboard.html">Register Organization</a></button>
+        </form>
+    </div>
+
+    <script>
+        if (form) {
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+
+        let isAnyItemChecked = false;
+        itemCheckboxes.forEach(checkbox => {
+            if (checkbox.checked) {
+                isAnyItemChecked = true;
+            }
+        });
+
+        if (!isAnyItemChecked) {
+            alert('Please select at least one type of item your organization needs.');
+            const firstCheckboxLabel = itemsNeededGroup.querySelector('label');
+             if (firstCheckboxLabel) {
+                firstCheckboxLabel.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                itemsNeededGroup.style.border = '2px solid #e74c3c'; // Highlight the group
+             }
+            return; // Stop form submission
+        } else {
+             itemsNeededGroup.style.border = '1px solid #eee'; // Reset border if valid
+        }
+
+        const contactName = document.getElementById('contact-name').value;
+        const orgName = document.getElementById('org-name').value;
+
+        console.log('Organization Registration Submitted');
+
+        alert(`Thank you, ${contactName} from ${orgName}! Your organization's registration has been submitted successfully.`);
+
+        form.reset();
+    });
+
+     itemCheckboxes.forEach(checkbox => {
+         checkbox.addEventListener('change', () => {
+             // Reset border color when user interacts with checkboxes after an error
+              let isAnyItemChecked = false;
+                itemCheckboxes.forEach(cb => {
+                    if (cb.checked) isAnyItemChecked = true;
+                });
+             if(isAnyItemChecked) {
+                 itemsNeededGroup.style.border = '1px solid #eee';
+             }
+         });
+     });
+
+} else {
+    console.error('Accepter form element not found!');
+}
+
+    </script>
+</body>
+</html>

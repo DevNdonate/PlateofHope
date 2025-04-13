@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What We Do | Plate of Kindness</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #f9eeee 0%, #e7d8d8 100%);
+      color: #333;
+    }
+    header {
+      background-color: #f4a021;
+      padding: 30px;
+      text-align: center;
+      color: #fff;
+      position: relative;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin: 0;
+    }
+    .home-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      background-color: #fff;
+      color: #ffbd59;
+      font-size: 1.5rem;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      animation: bounce 1.5s infinite;
+      z-index: 1000;
+    }
+    .home-button:hover {
+      background-color: #ffe4b3;
+    }
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+    .section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-title h2 {
+      font-size: 2.4rem;
+      color: #f79329;
+    }
+    .flex-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+      align-items: stretch;
+    }
+    .flex-item {
+      flex: 1 1 300px;
+      background-color: #ffffff75;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+    }
+    .flex-item:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+    .flex-item h3 {
+      color: #fa8c16;
+      margin-bottom: 10px;
+    }
+    .flex-item p {
+      color: #444;
+      line-height: 1.6;
+    }
+    .grid-cta {
+      background-color: #fff0da;
+      border-radius: 15px;
+      text-align: center;
+      padding: 50px 30px;
+      margin-top: 80px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.05);
+    }
+    .grid-cta h2 {
+      font-size: 2rem;
+      color: #fa8c16;
+      margin-bottom: 20px;
+    }
+    .grid-cta p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      color: #555;
+    }
+    footer {
+      background-color: #262626;
+      color: #f1f1f1;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 2rem;
+      }
+      .section-title h2 {
+        font-size: 1.8rem;
+      }
+      .grid-cta h2 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <a href="index.html" class="home-button" title="Back to Home">🏠</a>
+    <h1>What We Do</h1>
+  </header>
+
+  <section class="section" data-aos="fade-up">
+    <div class="section-title">
+      <h2>Creating Impact, One Step at a Time</h2>
+    </div>
+    <div class="flex-grid">
+      <div class="flex-item" data-aos="zoom-in">
+        <h3>Donation Matching</h3>
+        <p>We connect generous donors with verified NGOs and individuals who need essentials like food, clothing, and daily-use items.</p>
+      </div>
+      <div class="flex-item" data-aos="zoom-in" data-aos-delay="100">
+        <h3>Real-Time Requests</h3>
+        <p>NGOs can post real-time needs, and donors get notified instantly — making giving faster and more responsive.</p>
+      </div>
+      <div class="flex-item" data-aos="zoom-in" data-aos-delay="200">
+        <h3>Secure Deliveries</h3>
+        <p>Our volunteers and partners ensure safe, verified handovers with real-time tracking and feedback from recipients.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section grid-cta" data-aos="fade-up">
+    <h2>Join Our Movement</h2>
+    <p>Together, we can build a world where no usable item goes to waste, and every hand that gives finds one that needs. Be a part of our journey today.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Plate of Kindness. Powered by Purpose. Built by NIT Patna students 💛</p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+</body>
+</html>
